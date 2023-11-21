@@ -1,0 +1,28 @@
+﻿@page "{id}"
+@model WebApplicationExample.Pages.Product.UpdateModel
+@{
+}
+
+<h2>Update Product</h2>
+
+<form asp-page="Update" method="post">
+    <div class="form-group">
+        <label asp-for="UpdateCommand.Name"></label>
+        <input asp-for="UpdateCommand.Name" class="form-control" />
+        <span asp-validation-for="UpdateCommand.Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="UpdateCommand.Price"></label>
+        <input asp-for="UpdateCommand.Price" class="form-control" />
+        <span asp-validation-for="UpdateCommand.Price" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="UpdateCommand.Rating"></label>
+        <input asp-for="UpdateCommand.Rating" class="form-control" />
+        <span asp-validation-for="UpdateCommand.Rating" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Edit</button>
+</form>

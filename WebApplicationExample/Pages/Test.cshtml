@@ -1,0 +1,10 @@
+﻿@page
+@model WebApplicationExample.Pages.TestModel
+@{
+}
+
+@if (String.IsNullOrEmpty(Model.ConnectionString))
+{
+    <p>Null.</p>
+}
+<p>@Model.ConnectionString</p>

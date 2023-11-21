@@ -1,0 +1,31 @@
+﻿@page
+@model WebApplicationExample.Pages.Category.AllModel
+@{
+}
+
+<h2>All Categories</h2>
+
+<a asp-page="Create" class="btn-success mb-2 px-2 py-1 rounded-md">Create New Color</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var category in Model.CategoryViewModels)
+        {
+            <tr>
+                <td>@category.Id</td>
+                <td>@category.Name</td>
+                <td>
+                    <a asp-page="Update" asp-route-id="@category.Id">Edit</a> |
+                    <a asp-page="Delete" asp-route-id="@category.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

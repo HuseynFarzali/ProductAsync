@@ -1,0 +1,34 @@
+﻿@page
+@model WebApplicationExample.Pages.ProductItem.UpdateModel
+@{
+}
+
+<h2>Update Product Item</h2>
+
+<form asp-page="Update" method="post">
+    <div class="form-group">
+        <label asp-for="Command.ProductId"></label>
+        <input asp-for="Command.ProductId" class="form-control" />
+        <span asp-validation-for="Command.ProductId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Command.ColorId"></label>
+        <input asp-for="Command.ColorId" class="form-control" />
+        <span asp-validation-for="Command.ColorId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Command.SizeId"></label>
+        <input asp-for="Command.SizeId" class="form-control" />
+        <span asp-validation-for="Command.SizeId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Command.CategoryId"></label>
+        <input asp-for="Command.CategoryId" class="form-control" />
+        <span asp-validation-for="Command.CategoryId" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Edit</button>
+</form>

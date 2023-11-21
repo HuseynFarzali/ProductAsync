@@ -1,0 +1,17 @@
+﻿@page
+@model WebApplicationExample.Pages.Size.CreateModel
+@{
+    ViewData["Title"] = "Create Size";
+}
+
+<h2>Create Size</h2>
+
+<form asp-page="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Command.Name"></label>
+        <input asp-for="Command.Name" class="form-control" />
+        <span asp-validation-for="Command.Name" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>

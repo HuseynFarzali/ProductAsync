@@ -1,0 +1,31 @@
+﻿@page
+@model WebApplicationExample.Pages.Color.AllModel
+@{
+}
+
+<h2>All Colors</h2>
+
+<a asp-page="Create" class="btn-success mb-2 px-2 py-1 rounded-md">Create New Color</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var color in Model.ColorViewModels)
+        {
+            <tr>
+                <td>@color.Id</td>
+                <td>@color.Name</td>
+                <td>
+                    <a asp-page="Update" asp-route-id="@color.Id">Edit</a> |
+                    <a asp-page="Delete" asp-route-id="@color.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

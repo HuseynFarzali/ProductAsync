@@ -1,0 +1,37 @@
+﻿@page
+@model WebApplicationExample.Pages.ProductItem.AllModel
+@{
+}
+
+<h2>All Product Items</h2>
+
+<a asp-page="Create" class="btn-success mb-2 px-2 py-1 rounded-md">Create New Item</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Product Name</th>
+            <th>Color</th>
+            <th>Size</th>
+            <th>Category</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.ProductItemViewModels)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.ProductName</td>
+                <td>@item.ColorName</td>
+                <td>@item.SizeName</td>
+                <td>@item.CategoryName</td>
+                <td>
+                    <a asp-page="Update" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-page="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

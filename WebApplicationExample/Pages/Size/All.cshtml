@@ -1,0 +1,31 @@
+﻿@page
+@model WebApplicationExample.Pages.Size.AllModel
+@{
+}
+
+<h2>All Sizes</h2>
+
+<a asp-page="Create" class="btn-success mb-2 px-2 py-1 rounded-md">Create New Size</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var size in Model.SizeViewModels)
+        {
+            <tr>
+                <td>@size.Id</td>
+                <td>@size.Name</td>
+                <td>
+                    <a asp-page="Update" asp-route-id="@size.Id">Edit</a> |
+                    <a asp-page="Delete" asp-route-id="@size.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

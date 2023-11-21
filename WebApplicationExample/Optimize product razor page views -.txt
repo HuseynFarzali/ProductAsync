@@ -1,0 +1,3 @@
+check isDeleted property when creating new entity records;
+
+add modal crud for all (product, size, color, productItem)

@@ -1,0 +1,15 @@
+﻿@page "{id}"
+@model WebApplicationExample.Pages.Color.UpdateModel
+@{
+}
+<h2>Update Color</h2>
+
+<form asp-page="Update" method="post">
+    <div class="form-group">
+        <label asp-for="Command.Name"></label>
+        <input asp-for="Command.Name" class="form-control" />
+        <span asp-validation-for="Command.Name" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Edit</button>
+</form>
