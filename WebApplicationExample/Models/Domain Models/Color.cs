@@ -9,6 +9,6 @@ namespace WebApplicationExample.Models.Domain_Models
         public string Name { get; set; }
         public bool IsDeleted { get; set; }
 
-        public ICollection<ProductItem> ProductItems { get; set; }
+        public IEnumerable<ProductItem> ProductItems { get; set; }
     }
 }

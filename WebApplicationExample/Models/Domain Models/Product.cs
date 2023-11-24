@@ -11,6 +11,6 @@ namespace WebApplicationExample.Models.Domain_Models
         public int Rating { get; set; }
         public bool IsDeleted { get; set; }
 
-        public ICollection<ProductItem> ProductItems { get; set; }
+        public IEnumerable<ProductItem> ProductItems { get; set; }
     }
 }

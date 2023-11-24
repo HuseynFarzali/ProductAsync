@@ -71,7 +71,10 @@ namespace WebApplicationExample.Services.Implementations
 
         public async Task<Product> GetProductByIdAsync(int productId)
         {
-            var product = await _context.Products.Where(p => p.ProductId == productId).SingleOrDefaultAsync()
+            var product = await _context.Products
+                .Where(p => p.ProductId == productId)
+                .Include(p => p.ProductItems)
+                .SingleOrDefaultAsync()
                 ?? throw new System.Exception($"There is no product with id:{productId} in the database.");
 
             return product;

@@ -387,3 +387,6 @@ C:\Users\99450\Desktop\BackEnd_Code_Academy\WebApplicationExample\WebApplication
 C:\Users\99450\Desktop\BackEnd_Code_Academy\WebApplicationExample\WebApplicationExample\obj\Debug\net5.0\Razor\Pages\Category\Create.cshtml.g.cs
 C:\Users\99450\Desktop\BackEnd_Code_Academy\WebApplicationExample\WebApplicationExample\obj\Debug\net5.0\Razor\Pages\Category\Delete.cshtml.g.cs
 C:\Users\99450\Desktop\BackEnd_Code_Academy\WebApplicationExample\WebApplicationExample\obj\Debug\net5.0\Razor\Pages\Category\Update.cshtml.g.cs
+C:\Users\99450\Desktop\BackEnd_Code_Academy\WebApplicationExample\WebApplicationExample\obj\Debug\net5.0\Razor\Views\Partials\ProductModal\_ProductDetailsModalPartial.cshtml.g.cs
+C:\Users\99450\Desktop\BackEnd_Code_Academy\WebApplicationExample\WebApplicationExample\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\99450\Desktop\BackEnd_Code_Academy\WebApplicationExample\WebApplicationExample\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs

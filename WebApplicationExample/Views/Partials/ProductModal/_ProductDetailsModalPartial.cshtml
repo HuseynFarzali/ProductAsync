@@ -1,0 +1,71 @@
+﻿@using WebApplicationExample.Models.View_Models.ProductModalViewModels;
+@model ProductDetailedModalViewModel
+@{
+}
+
+<h2>Product Details</h2>
+
+<div class="px-2 py-1 border rounded-md shadow-sm">
+    <label asp-for="ProductId"></label>
+    <span>@Model.ProductId</span>
+</div>
+
+<div class="px-2 py-1 border rounded-md shadow-sm">
+    <label asp-for="ProductName"></label>
+    <span>@Model.ProductName</span>
+</div>
+
+<div class="px-2 py-1 border rounded-md shadow-sm">
+    <label asp-for="ProductPrice"></label>
+    <span>@Model.ProductPrice</span>
+</div>
+
+<div class="px-2 py-1 border rounded-md shadow-sm">
+    <label asp-for="ProductRating"></label>
+    <span>@Model.ProductRating</span>
+</div>
+
+<div class="px-2 py-1 border rounded-md shadow-sm">
+    <label asp-for="ProductUsedCategories"></label>
+    @foreach (var categoryViewModel in Model.ProductUsedCategories)
+    {
+        <div>
+            <label for="category-id">Category ID</label>
+            <span>@categoryViewModel.Id</span>
+        </div>
+        <div>
+            <label for="category-name">Category Name</label>
+            <span>@categoryViewModel.Name</span>
+        </div>
+    }
+</div>
+
+<div>
+    <label asp-for="ProductUsedColors"></label>
+    @foreach (var colorViewModel in Model.ProductUsedColors)
+    {
+        <div>
+            <label for="color-id">Color ID</label>
+            <p>@colorViewModel.Id</p>
+        </div>
+        <div>
+            <label for="color-name">Color Name</label>
+            <p>@colorViewModel.Name</p>
+        </div>
+    }
+</div>
+
+<div>
+    <label asp-for="ProductUsedSizes"></label>
+    @foreach (var sizeViewModel in Model.ProductUsedSizes)
+    {
+        <div>
+            <label for="size-id">Size ID</label>
+            <p>@sizeViewModel.Id</p>
+        </div>
+        <div>
+            <label for="size-name">Size Name</label>
+            <p>@sizeViewModel.Name</p>
+        </div>
+    }
+</div>

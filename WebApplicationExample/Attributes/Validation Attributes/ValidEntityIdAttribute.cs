@@ -56,6 +56,15 @@ namespace WebApplicationExample.Attributes.Validation_Attributes
                     return new ValidationResult($"The specified {validationContext.DisplayName} does not exist.");
                 }
             }
+            else if (validationContext.ObjectType.Name is "Categories")
+            {
+                var entity = dbContext.Categories.Find(entityId);
+
+                if (entity == null)
+                {
+                    return new ValidationResult($"The specified {validationContext.DisplayName} does not exist.");
+                }
+            }
 
             return ValidationResult.Success;
         }
